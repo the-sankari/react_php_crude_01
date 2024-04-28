@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 export default function CreateUser() {
   const [inputs, setInputs] = useState({});
@@ -9,6 +10,7 @@ export default function CreateUser() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
+    axios.post("http://localhost:/react_crud/api/user/save", inputs);
     console.log(inputs);
   };
   return (
