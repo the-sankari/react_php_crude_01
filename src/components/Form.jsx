@@ -1,4 +1,4 @@
-export default function Form(formHandler, formData) {
+function Form(formHandler, formData) {
   return (
     <form className="container" onChange={formHandler}>
       <div className="form-floating mb-3">
@@ -48,3 +48,5 @@ export default function Form(formHandler, formData) {
     </form>
   );
 }
+
+export default Form;
